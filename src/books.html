@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Microbits Consulting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        .book-card:hover .book-actions {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <section class="container mx-auto px-4 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Publications</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover transformative works that provide practical business solutions</p>
+                <div class="h-1 w-24 bg-primary mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Book 1 -->
+                <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="relative">
+                        <div class="bg-gray-200 w-full h-64 flex items-center justify-center">
+                            <i class="fas fa-book-open text-4xl text-gray-400"></i>
+                        </div>
+                        <div class="book-actions absolute inset-0 bg-black/70 flex items-center justify-center gap-4 opacity-0 transition-all duration-300 transform translate-y-4">
+                            <button class="read-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg" data-book-id="book1">
+                                <i class="fas fa-book-open mr-2"></i> Read Online
+                            </button>
+                            <button class="buy-btn bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg" data-book-id="book1">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy (₦5,000)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Strategic Financial Management</h3>
+                        <p class="text-gray-600 mb-4">Master the art of financial decision-making for business success.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">Available Online</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="relative">
+                        <div class="bg-gray-200 w-full h-64 flex items-center justify-center">
+                            <i class="fas fa-book-open text-4xl text-gray-400"></i>
+                        </div>
+                        <div class="book-actions absolute inset-0 bg-black/70 flex items-center justify-center gap-4 opacity-0 transition-all duration-300 transform translate-y-4">
+                            <button class="read-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg" data-book-id="book2">
+                                <i class="fas fa-book-open mr-2"></i> Read Online
+                            </button>
+                            <button class="buy-btn bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg" data-book-id="book2">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy (₦4,500)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tax Optimization Strategies</h3>
+                        <p class="text-gray-600 mb-4">Legal and effective methods to minimize your tax burden.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">Available Online</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="relative">
+                        <div class="bg-gray-200 w-full h-64 flex items-center justify-center">
+                            <i class="fas fa-book-open text-4xl text-gray-400"></i>
+                        </div>
+                        <div class="book-actions absolute inset-0 bg-black/70 flex items-center justify-center gap-4 opacity-0 transition-all duration-300 transform translate-y-4">
+                            <button class="read-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg" data-book-id="book3">
+                                <i class="fas fa-book-open mr-2"></i> Read Online
+                            </button>
+                            <button class="buy-btn bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg" data-book-id="book3">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy (₦6,000)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Digital Marketing Mastery</h3>
+                        <p class="text-gray-600 mb-4">Transform your online presence and reach your target audience.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">Available Online</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Component -->
+        <section id="cta"></section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+   <script type="module" src="/main.js"></script>
+</body>
+</html>

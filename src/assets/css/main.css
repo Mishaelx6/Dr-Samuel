@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body text-gray-800 bg-gray-50;
+}
+
+[id="header"], [id="footer"], [id="cta"] {
+    min-height: 80px;
+    position: relative;
+}
+
+[id="header"]::before, [id="footer"]::before, [id="cta"]::before {
+    content: "Loading...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+}
+
+/* Navigation transitions */
+.page-transition {
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+/* Prevent double-tap zoom on mobile */
+.nav-link, .footer-nav {
+    touch-action: manipulation;
+}
