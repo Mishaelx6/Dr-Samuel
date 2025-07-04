@@ -60,29 +60,37 @@ function initializeApp() {
 function loadAllComponents() {
     navigationLock = false;
     
-    // Header
+    // Header, Footer, CTA (common to all pages)
     safeInjectComponent('header', Header());
-    
-    // Footer
     safeInjectComponent('footer', Footer());
-    
-    // CTA
     safeInjectComponent('cta', StrategyCTA());
-    
+
     // Page-Specific Components
     const path = window.location.pathname;
-    
+
     if (path === '/' || path.includes('index.html')) {
         safeInjectComponent('hero', Hero());
         safeInjectComponent('about', AboutSection());
         safeInjectComponent('author', AuthurProfile());
         initializeHeroCarousel();
-    }
-    
-    if (path.includes('books.html')) {
+    } else if (path.includes('about.html')) {
+        safeInjectComponent('about', AboutSection());
+    } else if (path.includes('books.html')) {
         const booksHTML = books.map(book => BookCard(book)).join('');
         safeInjectComponent('books-container', booksHTML);
+    } else if (path.includes('contact.html')) {
+        console.log('Contact page loaded');
+        // Add contact-specific components if any
+    } else if (path.includes('events.html')) {
+        console.log('Events page loaded');
+        // Add events-specific components if any
+    } else if (path.includes('videos.html')) {
+        console.log('Videos page loaded');
+        // Add videos-specific components if any
     }
+
+    // Dispatch componentsReady event
+    document.dispatchEvent(new CustomEvent('componentsReady'));
 }
 
 function safeInjectComponent(elementId, html) {
